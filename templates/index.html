@@ -11,8 +11,29 @@
     <h1> Hello, my guest</h1>
 
 </div>
-    <p><a href="/article">Interesting Article</a> | <a href="/mem">Memes</a> | <a href="#">Contact</a></p>
+    <p><a href="/article.html">Interesting Article</a> | <a href="/memes.html">Memes</a> | <a href="/contacts.html">Contact</a></p>
     <p>Svetlana UI 2019 for DS course</p>
+    <img src="mycourse.jpg" alt="names">
+    <p>server { </p>
+    <p>&emsp;server_name  reducation.tk www.reducation.tk;</p>
+    <p>&emsp;listen 80 default_server;</p>
+    <p>&emsp;listen [::]:80 default_server;</p>
+    <p></p>
+    <p>&emsp;if ($http_x_forwarded_proto = "http") {</p>
+    <p>&emsp;&emsp;return 301 https://$host$request_uri;</p>
+    <p>&emsp;}</p>
+    <p></p>
+    <p>&emsp;location / {</p>
+    <p>&emsp;&emsp;    root /var/www/reducation.tk/html;</p>
+    <p>&emsp;}</p>
+    <p></p>
+    <p>&emsp;listen 443 ssl; # managed by Certbot</p>
+    <p>&emsp;ssl_certificate /etc/letsencrypt/live/reducation.tk/fullchain.pem; # managed by Certbot</p>
+    <p>&emsp;ssl_certificate_key /etc/letsencrypt/live/reducation.tk/privkey.pem; # managed by Certbot</p>
+    <p>&emsp;include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot</p>
+    <p>&emsp;ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot</p>
+    <p>}</p>
+</p>
 
 
 
